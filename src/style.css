@@ -1,0 +1,103 @@
+.background {
+    -fx-background-color: #363636;
+    -fx-border-color: #545454;
+}
+
+.jfx-tab-pane:top .depth-container .tab-header-area .tab-header-background {
+    -fx-background-color: #9c2a00;
+}
+
+.jfx-tab-pane:top .depth-container .tab-header-area .headers-region .tab:selected:top {
+    -fx-background-color: #500000;
+}
+
+.tab .text {
+    -fx-font-family: Calibri;
+    -fx-font-size: 17;
+}
+
+.anchor-color {
+    -fx-background-color: #434343;
+    -fx-border-color: #545454;
+}
+
+.label-info {
+    -fx-text-fill: #DCDCDC;
+}
+
+.textField {
+    -fx-background-color: #434343;
+    -fx-border-color: #464646;
+    -fx-text-fill: #DCDCDC;
+}
+
+.combo-box {
+    -fx-base: rgba(100, 0, 0, 0.6);
+    -fx-background-color: #434343;
+    -fx-border-color: #464646;
+    -fx-text-fill: #DCDCDC;
+}
+
+.combo-box .cell {
+    -fx-background-color: #434343;
+}
+
+.combo-box .list-cell:filled:selected {
+    -fx-background-color: #821100;
+}
+
+.combo-box .list-view {
+    -fx-background-color: #640000;
+}
+
+.combo-box .input-line {
+    -fx-background-color: rgba(215, 215, 215, 0.96);
+}
+
+.combo-box .input-focused-line {
+    -fx-background-color: #f0f543;
+}
+
+.buttonAdd {
+    -fx-background-color: rgba(0, 228, 116, 0.88);
+    -fx-text-fill: #00501e;
+}
+
+.buttonDelete {
+    -fx-background-color: rgba(228, 63, 0, 0.88);
+    -fx-text-fill: #500000;
+}
+
+.buttonPosit {
+    -fx-background-color: rgba(125, 228, 189, 0.88);
+    -fx-text-fill: #225039;
+}
+
+.table-view {
+    -fx-base: #821100;
+    -fx-background-color: #434343;
+    -fx-border-color: #464646;
+    -fx-text-fill: #DCDCDC;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: #9C2A00;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #9c2a00;
+}
+
+.table-view:row-selection .placeholder .label .text {
+    visibility: hidden;
+}
+
+.cell {
+    -fx-background-color: rgba(44, 2, 3, 0.12);
+    -fx-border-color: #666666;
+    -fx-text-fill: #DCDCDC;
+}
+
+.scroll-bar {
+    -fx-background-color: #434343;
+}

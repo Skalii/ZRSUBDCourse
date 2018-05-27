@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="690.0" prefWidth="700.0" styleClass="background" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <JFXTabPane prefHeight="690.0" prefWidth="700.0">
+        <tabs>
+            <Tab text="Оформление заказа">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <children>
+                     <AnchorPane layoutX="5.0" layoutY="5.0" prefHeight="170.0" prefWidth="165.0" styleClass="anchor-color">
+                        <children>
+                           <JFXTextField fx:id="textClientName" layoutX="8.0" layoutY="11.0" prefHeight="25.0" prefWidth="150.0" promptText="Как вас зовут?" styleClass="textField">
+                              <font>
+                                 <Font name="Calibri" size="13.0" />
+                              </font>
+                           </JFXTextField>
+                           <JFXTextField fx:id="textClientEmail" layoutX="8.0" layoutY="46.0" prefHeight="25.0" prefWidth="150.0" promptText="email" styleClass="textField">
+                              <font>
+                                 <Font name="Calibri" size="13.0" />
+                              </font>
+                           </JFXTextField>
+                           <JFXTextField fx:id="textClientPhone" layoutX="8.0" layoutY="84.0" prefHeight="25.0" prefWidth="150.0" promptText="Номер телефона" styleClass="textField">
+                              <font>
+                                 <Font name="Calibri" size="13.0" />
+                              </font>
+                           </JFXTextField>
+                           <JFXButton fx:id="buttonOrderCreate" alignment="CENTER" cache="true" layoutX="20.0" layoutY="122.0" prefHeight="41.0" prefWidth="126.0" ripplerFill="#00b8a0" styleClass="buttonPosit" text="Оформить заказ">
+                              <font>
+                                 <Font name="Calibri" size="15.0" />
+                              </font>
+                           </JFXButton>
+                        </children>
+                     </AnchorPane>
+                     <AnchorPane layoutX="177.0" layoutY="5.0" prefHeight="170.0" prefWidth="350.0" styleClass="anchor-color">
+                        <children>
+                           <Label layoutX="131.0" layoutY="2.0" styleClass="label-info" text="Ваш заказ">
+                              <font>
+                                 <Font name="Calibri Bold" size="20.0" />
+                              </font>
+                           </Label>
+                           <TableView fx:id="tableOrder" layoutX="5.0" layoutY="30.0" prefHeight="135.0" prefWidth="340.0" />
+                        </children>
+                     </AnchorPane>
+                     <AnchorPane layoutX="534.0" layoutY="58.0" prefHeight="117.0" prefWidth="163.0" styleClass="anchor-color">
+                        <children>
+                           <Label fx:id="labelInfoSum" layoutX="32.0" styleClass="label-info" text="Стоимость товара">
+                              <font>
+                                 <Font name="Calibri" size="13.0" />
+                              </font>
+                           </Label>
+                           <Label fx:id="labelSumUnit" alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="17.0" prefHeight="23.0" prefWidth="160.0" styleClass="label-info" text="Стоимость">
+                              <font>
+                                 <Font name="Calibri Bold" size="20.0" />
+                              </font>
+                           </Label>
+                           <Label fx:id="labelModelQuantity" alignment="CENTER" layoutX="1.0" layoutY="42.0" prefWidth="160.0" styleClass="label-info" text="Наличие">
+                              <font>
+                                 <Font name="Calibri" size="12.0" />
+                              </font>
+                           </Label>
+                           <Label fx:id="labelInfoSumOrder" layoutX="24.0" layoutY="63.0" styleClass="label-info" text="Общая сумма заказа">
+                              <font>
+                                 <Font name="Calibri" size="13.0" />
+                              </font>
+                           </Label>
+                           <Label fx:id="labelSumOrder" alignment="CENTER" layoutX="1.0" layoutY="80.0" prefHeight="27.0" prefWidth="160.0" styleClass="label-info" text="Сумма заказа">
+                              <font>
+                                 <Font name="Calibri Bold" size="19.0" />
+                              </font>
+                           </Label>
+                                  <JFXTextField fx:id="textLogin" layoutX="6.0" layoutY="6.0" prefHeight="25.0" prefWidth="150.0" promptText="Логин" styleClass="textField" visible="false">
+                              <font>
+                                 <Font name="Calibri" size="13.0" />
+                              </font>
+                           </JFXTextField>
+                           <JFXPasswordField fx:id="textPassword" layoutX="6.0" layoutY="36.0" prefHeight="25.0" prefWidth="150.0" promptText="Пароль" styleClass="textField" visible="false">
+                              <font>
+                                 <Font name="Calibri" size="13.0" />
+                              </font>
+                           </JFXPasswordField>
+                                  <JFXButton fx:id="buttonLogin" layoutX="56.0" layoutY="71.0" prefHeight="25.0" prefWidth="50.0" ripplerFill="#11c633" styleClass="buttonPosit" text="Вход" visible="false">
+                              <font>
+                                 <Font name="Calibri" size="13.0" />
+                              </font>
+                           </JFXButton>
+                           <Label fx:id="labelErrorLogin" alignment="CENTER_RIGHT" layoutX="6.0" layoutY="101.0" prefWidth="150.0" text="Неверный логин или пароль" textFill="ORANGERED" visible="false">
+                              <font>
+                                 <Font name="Calibri" size="12.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </AnchorPane>
+                            <Label fx:id="labelAdmin" alignment="CENTER_RIGHT" layoutX="532.0" layoutY="2.0" prefHeight="25.0" prefWidth="160.0" text="Вы Администратор?" textAlignment="RIGHT" textFill="#61c0ff">
+                        <cursor>
+                           <Cursor fx:constant="HAND" />
+                        </cursor>
+                        <font>
+                           <Font name="Calibri" size="12.0" />
+                        </font></Label>
+                            <JFXButton fx:id="buttonExit" layoutX="630.0" layoutY="30.0" prefWidth="62.0" styleClass="buttonDelete" text="Закрыть" textFill="#9a0000" visible="false">
+                        <font>
+                           <Font name="Calibri" size="12.0" />
+                        </font>
+                     </JFXButton>
+                     <JFXButton fx:id="buttonOrderAdd" cache="true" layoutX="358.0" layoutY="183.0" prefHeight="46.0" ripplerFill="#00b800" styleClass="buttonAdd" text="Добавить" textFill="#0a9a41">
+                        <font>
+                           <Font name="Calibri" size="15.0" />
+                        </font>
+                     </JFXButton>
+                     <JFXButton fx:id="buttonOrderDelete" disable="true" layoutX="450.0" layoutY="183.0" prefHeight="46.0" ripplerFill="#b80000" styleClass="buttonDelete" text="Удалить" textFill="#b80000">
+                        <font>
+                           <Font name="Calibri" size="15.0" />
+                        </font>
+                     </JFXButton>
+                     <JFXTextField fx:id="textSearch" layoutX="14.0" layoutY="187.0" prefHeight="37.0" prefWidth="210.0" promptText="Поиск по параметру" style="-fx-text-fill: DCDCDC;">
+                        <font>
+                           <Font name="Calibri" size="13.0" />
+                        </font></JFXTextField>
+                     <JFXCheckBox fx:id="checkSearchExt" checkedColor="#00b800" layoutX="222.0" layoutY="187.0" prefHeight="35.0" prefWidth="66.0" text="расш." textFill="GAINSBORO" wrapText="true">
+                        <font>
+                           <Font name="Calibri" size="12.0" />
+                        </font></JFXCheckBox>
+                     <AnchorPane fx:id="anchorSearch" layoutX="5.0" layoutY="235.0" prefHeight="115.0" prefWidth="690.0" styleClass="anchor-color" visible="false">
+                        <children>
+                           <JFXComboBox fx:id="comboSearchManufacturer" focusColor="#61c0ff" layoutX="5.0" layoutY="3.0" promptText="Производитель" styleClass="combo-box" />
+                           <JFXComboBox fx:id="comboSearchModel" focusColor="#61c0ff" layoutX="165.0" layoutY="3.0" prefWidth="195.0" promptText="Модель" styleClass="combo-box" />
+                           <JFXComboBox fx:id="comboSearchDiagonal" focusColor="#61c0ff" layoutX="370.0" layoutY="3.0" promptText="Диагональ" styleClass="combo-box" />
+                           <JFXComboBox fx:id="comboSearchResolution" focusColor="#61c0ff" layoutX="525.0" layoutY="3.0" promptText="Разрешение" styleClass="combo-box" />
+                           <JFXComboBox fx:id="comboSearchProcessor" focusColor="#61c0ff" layoutX="5.0" layoutY="43.0" promptText="Процессор" styleClass="combo-box" />
+                           <JFXComboBox fx:id="comboSearchVideo" focusColor="#61c0ff" layoutX="165.0" layoutY="43.0" promptText="Видеокарта" styleClass="combo-box" />
+                           <JFXComboBox fx:id="comboSearchRAM" focusColor="#61c0ff" layoutX="370.0" layoutY="43.0" promptText="RAM" styleClass="combo-box" />
+                           <JFXComboBox fx:id="comboSearchHDD" focusColor="#61c0ff" layoutX="525.0" layoutY="43.0" promptText="HDD/SSD" styleClass="combo-box" />
+                           <JFXComboBox fx:id="comboSearchDVD" focusColor="#61c0ff" layoutX="5.0" layoutY="83.0" promptText="DVD" styleClass="combo-box" />
+                           <JFXComboBox fx:id="comboSearchBattery" focusColor="#61c0ff" layoutX="165.0" layoutY="83.0" promptText="Батарея" styleClass="combo-box" />
+                           <JFXComboBox fx:id="comboSearchOS" focusColor="#61c0ff" layoutX="370.0" layoutY="83.0" promptText="OS" styleClass="combo-box" />
+                        </children>
+                     </AnchorPane>
+                     <TableView fx:id="tableSearch" layoutX="5.0" layoutY="235.0" prefHeight="415.0" prefWidth="690.0" />
+                        </children></AnchorPane>
+                </content>
+            </Tab>
+            <Tab fx:id="tabAdmin" text="Администратор">
+            <content>
+               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                     <JFXComboBox fx:id="comboTables" layoutX="15.0" layoutY="20.0" prefHeight="30.0" prefWidth="275.0" promptText="-  не выбрано  -" />
+                     <JFXButton fx:id="buttonAdd" alignment="CENTER" defaultButton="true" disable="true" layoutX="500.0" layoutY="15.0" prefHeight="40.0" prefWidth="90.0" ripplerFill="#00b800" styleClass="buttonAdd" text="Добавить" textFill="#0a9a41" />
+                     <JFXButton fx:id="buttonDelete" defaultButton="true" disable="true" layoutX="595.0" layoutY="15.0" prefHeight="40.0" prefWidth="90.0" ripplerFill="#b80000" styleClass="buttonDelete" text="Удалить" textFill="#b80000" />
+                     <AnchorPane fx:id="anchorQuery" layoutX="10.0" layoutY="65.0" prefHeight="140.0" prefWidth="680.0" styleClass="anchor-color" visible="false">
+                        <children>
+                           <JFXComboBox fx:id="combo1" layoutX="10.0" layoutY="10.0" prefHeight="25.0" visible="false" />
+                           <JFXComboBox fx:id="combo2" layoutX="10.0" layoutY="57.0" prefHeight="25.0" visible="false" />
+                           <JFXComboBox fx:id="combo3" layoutX="10.0" layoutY="104.0" prefHeight="25.0" visible="false" />
+                           <JFXTextField fx:id="textAdd1" layoutX="10.0" layoutY="10.0" prefWidth="120.0" styleClass="textField" visible="false" />
+                           <JFXTextField fx:id="textAdd2" layoutX="145.0" layoutY="10.0" prefHeight="25.0" prefWidth="120.0" styleClass="textField" visible="false" />
+                           <JFXTextField fx:id="textAdd3" layoutX="280.0" layoutY="10.0" prefHeight="0.0" prefWidth="120.0" styleClass="textField" visible="false" />
+                           <JFXTextField fx:id="textAdd4" layoutX="415.0" layoutY="10.0" prefHeight="25.0" prefWidth="120.0" styleClass="textField" visible="false" />
+                           <JFXTextField fx:id="textAdd5" layoutX="550.0" layoutY="10.0" prefHeight="0.0" prefWidth="120.0" styleClass="textField" visible="false" />
+                           <JFXTextField fx:id="textAdd6" layoutX="10.0" layoutY="57.0" prefWidth="120.0" styleClass="textField" visible="false" />
+                           <JFXTextField fx:id="textAdd7" layoutX="145.0" layoutY="57.0" prefHeight="25.0" prefWidth="120.0" styleClass="textField" visible="false" />
+                           <JFXTextField fx:id="textAdd8" layoutX="280.0" layoutY="57.0" prefHeight="0.0" prefWidth="120.0" styleClass="textField" visible="false" />
+                           <JFXTextField fx:id="textAdd9" layoutX="415.0" layoutY="57.0" prefHeight="0.0" prefWidth="120.0" styleClass="textField" visible="false" />
+                           <JFXTextField fx:id="textAdd10" layoutX="550.0" layoutY="57.0" prefHeight="25.0" prefWidth="120.0" styleClass="textField" visible="false" />
+                           <JFXTextField fx:id="textAdd11" layoutX="10.0" layoutY="104.0" prefHeight="0.0" prefWidth="120.0" styleClass="textField" visible="false" />
+                           <JFXTextField fx:id="textAdd12" layoutX="145.0" layoutY="104.0" prefHeight="0.0" prefWidth="120.0" styleClass="textField" visible="false" />
+                           <JFXTextField fx:id="textAdd13" layoutX="280.0" layoutY="104.0" prefHeight="0.0" prefWidth="120.0" styleClass="textField" visible="false" />
+                           <JFXDatePicker fx:id="datePicker" layoutX="427.0" layoutY="101.0" prefHeight="28.0" prefWidth="145.0" promptText="Дата" styleClass="table-view" visible="false" />
+                           <JFXButton fx:id="buttonExec" defaultButton="true" disable="true" layoutX="589.0" layoutY="95.0" prefHeight="40.0" ripplerFill="#00b8a0" styleClass="buttonPosit" text="Выполнить" textFill="#0a9a41" visible="false" />
+                        </children>
+                     </AnchorPane>
+                     <TableView fx:id="tableQuery" disable="true" layoutX="5.0" layoutY="211.0" prefHeight="440.0" prefWidth="690.0" />
+                     <TableView fx:id="tableQuerySD" disable="true" layoutX="455.0" layoutY="211.0" prefHeight="430.0" prefWidth="231.0" visible="false" />
+                     <JFXTextField fx:id="textAdminSearch" disable="true" layoutX="302.0" layoutY="20.0" prefHeight="30.0" prefWidth="180.0" promptText="Поиск" style="-fx-text-fill: DCDCDC;" />
+                  </children>
+               </AnchorPane>
+            </content>
+            </Tab>
+        </tabs>
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets>
+    </JFXTabPane>
+</AnchorPane>
